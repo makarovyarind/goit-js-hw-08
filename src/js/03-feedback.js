@@ -1,5 +1,5 @@
 import throttle from "lodash.throttle";
-LOCAL_KEY = 'feedback-form-state'; 
+const LOCAL_KEY = 'feedback-form-state'; 
 
 let formData = {};
 
@@ -19,7 +19,7 @@ function savedText() {
     let data = localStorage.getItem(LOCAL_KEY);
     
     if (data) {
-        formData = JSON.parse(data);
+    formData = JSON.parse(data);
     refs.input.value = formData.email || '';
     refs.textarea.value = formData.message || '';
     }
